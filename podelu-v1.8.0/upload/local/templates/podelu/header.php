@@ -1,0 +1,4 @@
+<?php
+/** По делу v1.8.0. GSAP подгружается асинхронно локальным motion.js, не блокируя приложение. */
+if(!defined('B_PROLOG_INCLUDED')||B_PROLOG_INCLUDED!==true){die();}\Bitrix\Main\UI\Extension::load('main.core');$a=\Bitrix\Main\Page\Asset::getInstance();$a->addCss(SITE_TEMPLATE_PATH.'/app.css?v=1.8.0');foreach(['motion','ui','radial'] as $s)$a->addJs('/local/components/markitan/podelu/templates/app/'.$s.'.js?v=1.8.0');
+?><!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title><?php $APPLICATION->ShowTitle(); ?></title><?php $APPLICATION->ShowHead(); ?></head><body><?php $APPLICATION->ShowPanel(); ?><header class="header"><a class="brand" href="/clients/"><i></i><span>ПО ДЕЛУ <small>by Markitan Concept</small></span></a><span class="header-meta">РАБОЧЕЕ ПРОСТРАНСТВО / v1.8.0</span></header>
