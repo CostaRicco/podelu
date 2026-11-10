@@ -1,0 +1,15 @@
+/* По делу v1.9.1. Полный стиль секторного виджета. Подключается новым header.php после app.css v1.9.0. */
+.pd-ring-node.pd-sector{padding:0;border:0;border-radius:0;background:transparent;transition:none;isolation:isolate}
+.pd-sector .pd-ring-face{position:relative;display:block;overflow:hidden;width:100%;height:100%;border:0;border-radius:0;box-shadow:none;transform-origin:center;background:var(--pd-glass,rgba(24,20,17,.62));backdrop-filter:blur(20px) saturate(1.15);-webkit-backdrop-filter:blur(20px) saturate(1.15)}
+.pd-ring-node.pd-sector:hover,.pd-ring-node.pd-sector:active{background:transparent;transform:translate(-50%,-50%)}
+.pd-ring-node.pd-sector:hover .pd-ring-face,.pd-ring-node.pd-sector:focus-visible .pd-ring-face{background:rgba(24,20,17,.72)}
+.pd-ring-node.pd-sector.selected .pd-ring-face{color:var(--hot,#ff4a1c);background:rgba(24,20,17,.72)}
+.pd-sector .pd-ring-face>svg.pd-sector-outline{position:absolute;inset:0;display:block;width:100%;height:100%;fill:none;stroke:rgba(255,255,255,.32);stroke-width:1.5;pointer-events:none}
+.pd-sector:hover .pd-ring-face>svg.pd-sector-outline,.pd-sector.selected .pd-ring-face>svg.pd-sector-outline,.pd-sector:focus-visible .pd-ring-face>svg.pd-sector-outline{stroke:rgba(255,74,28,.78)}
+.pd-sector .pd-sector-content{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;line-height:1;pointer-events:none;white-space:nowrap}
+.pd-sector-content svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.pd-time .pd-sector-content{font:500 11px/1 var(--font,'Medeo Sans',Arial,sans-serif);letter-spacing:0}
+.pd-time .pd-sector-content.pd-long-time{font-size:10px}
+.pd-sector:focus-visible{outline:none}
+.pd-ring-layer{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.pd-sector .pd-ring-face{animation:none!important;transition:none!important}}
